@@ -1,7 +1,6 @@
 import 'package:database/db_model.dart';
 import 'package:flutter/material.dart';
 import './user_input.dart';
-//import './todo_card.dart';
 import './todo_list.dart';
 import './todo_model.dart';
 

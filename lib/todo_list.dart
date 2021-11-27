@@ -22,14 +22,13 @@ class Todolist extends StatelessWidget {
 
         return datalenght == 0
             ? const Center(
-                child: Text('No data found'),
+                child: Text('Nenhum item adicionado'),
               )
             : ListView.builder(
                 itemCount: datalenght,
                 itemBuilder: (context, i) => Todocard(
                     id: data[i].id,
                     title: data[i].title,
-                    creationDate: data[i].creationDate,
                     isChecked: data[i].isChecked,
                     insertFunction: insertFunction,
                     deleteFunction: deleteFunction),

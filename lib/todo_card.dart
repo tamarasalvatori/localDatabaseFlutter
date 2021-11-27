@@ -5,7 +5,6 @@ class Todocard extends StatefulWidget {
   Todocard(
       {this.id,
       this.title,
-      this.creationDate,
       this.isChecked,
       this.insertFunction,
       this.deleteFunction,
@@ -14,7 +13,6 @@ class Todocard extends StatefulWidget {
 
   int id;
   String title;
-  DateTime creationDate;
   Function insertFunction;
   Function deleteFunction;
   bool isChecked;
@@ -26,11 +24,8 @@ class Todocard extends StatefulWidget {
 class _TodocardState extends State<Todocard> {
   @override
   Widget build(BuildContext context) {
-    var anotherTodo = Todo(
-        id: widget.id,
-        title: widget.title,
-        creationDate: widget.creationDate,
-        isChecked: widget.isChecked);
+    var anotherTodo =
+        Todo(id: widget.id, title: widget.title, isChecked: widget.isChecked);
 
     return Card(
         child: Row(
@@ -58,8 +53,6 @@ class _TodocardState extends State<Todocard> {
                 fontSize: 18,
               ),
             ),
-            const SizedBox(height: 5),
-            Text(widget.creationDate.toString()),
           ],
         )),
         IconButton(

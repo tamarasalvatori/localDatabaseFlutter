@@ -26,18 +26,15 @@ class UserInput extends StatelessWidget {
             const SizedBox(width: 10),
             GestureDetector(
               onTap: () {
-                var myTodo = Todo(
-                    title: textController.text,
-                    creationDate: DateTime.now(),
-                    isChecked: false);
+                var myTodo = Todo(title: textController.text, isChecked: false);
                 insertFunction(myTodo);
               },
               child: Container(
-                color: Colors.red,
+                color: Colors.blueGrey,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 child: const Text(
-                  'Add',
+                  'Adicionar',
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
